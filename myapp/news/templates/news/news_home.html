@@ -1,0 +1,27 @@
+{% extends "main/layout.html" %} 
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>{{ title }}</h1>
+        {% if news%}
+        {% for el in news %}
+            <div class="NewWrapper">
+                <h3>{{el.title}}</h3>
+                <div>{{el.anons}}</div>
+                <div>{{el.full_text}}</div>
+                <span>{{el.date}}</span>
+            </div>
+        {% endfor %}
+        {% else %}
+        <h2>On Page dont have News :(</h2>
+        {% endif%}
+     
+
+    <div>
+        <button class="btn btn-success"">Back</button>
+    </div>
+
+    </div>
+{% endblock %}
