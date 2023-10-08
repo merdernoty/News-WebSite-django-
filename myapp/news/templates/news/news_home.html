@@ -10,8 +10,9 @@
             <div class="NewWrapper">
                 <h3>{{el.title}}</h3>
                 <div>{{el.anons}}</div>
-                <div>{{el.full_text}}</div>
                 <span>{{el.date}}</span>
+                <Br>
+                <a href={% url 'news_detail' el.id %} class="btn btn-warning">Read</a>
             </div>
         {% endfor %}
         {% else %}
